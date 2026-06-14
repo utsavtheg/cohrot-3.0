@@ -636,12 +636,7 @@
 //   }
 // }
 
-let person = {
-  name:"Aman",
-  age:25,
-  city:"Bhopal",
-  isStudent:true
-},
+
 
 
 
