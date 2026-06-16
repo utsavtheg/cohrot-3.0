@@ -239,32 +239,119 @@ let person = {name:"Aman",age:23,city:"Bhopal"};
 
 // Project 2 Shopping cart
 
-let cart = [];
-function addItem(name, price, qty = 1){
-  let existing = cart.find(item => item.name === name);
-  if(existing){
-    existing.qty += qty;
+// let cart = [];
+// function addItem(name, price, qty = 1){
+//   let existing = cart.find(item => item.name === name);
+//   if(existing){
+//     existing.qty += qty;
 
-  }else{
-    cart.push({name,price,qty});
-  }
-}
+//   }else{
+//     cart.push({name,price,qty});
+//   }
+// }
 
-function removeItem(name){
-  cart = cart.filter(item => item.name !== name);
-}
-function getTotal(){
-  return cart.reduce((sum,item) => sum + item.price * item.qty,0);
-}
-function showCart(){
-  cart.forEach(item =>{
-    console.log(`${item.name} x ${item.qty} = ₹${getTotal()}`);
+// function removeItem(name){
+//   cart = cart.filter(item => item.name !== name);
+// }
+// function getTotal(){
+//   return cart.reduce((sum,item) => sum + item.price * item.qty,0);
+// }
+// function showCart(){
+//   cart.forEach(item =>{
+//     console.log(`${item.name} x ${item.qty} = ₹${getTotal()}`);
     
-  });
-  console.log(`Total: ₹${getTotal()}`);
+//   });
+//   console.log(`Total: ₹${getTotal()}`);
   
-}
-addItem('Notebook', 100, 5);
-addItem("Bottle",120, 6);
-// addItem("Biscuit",35,12);
-showCart()
+// }
+// addItem('Notebook', 100, 5);
+// addItem("Bottle",120, 6);
+// // addItem("Biscuit",35,12);
+// showCart()
+
+
+// let todos = [];
+// function addTodo(task){
+//   todos.push({id:todos.length+1,task,done:false});
+// }
+// function completeTodo(id){
+//   let todo = todo.find(t => t.id === id);
+//   if(todo)todo.done = true;
+// }
+// function removeTodo(id){
+//   todos = todos.filter(t =>t.id !== id);
+// }
+
+// function showTodos(){
+//   todos.forEach(t => {
+//     console.log(`${t.id}.[${t.done?"x":" "}] ${t.task}`);
+    
+//   });
+// }
+
+// addTodo("Learn Js");
+// console.log(todos);
+// removeTodo(1);
+// console.log(todos);
+
+// let students = [
+//   {name:"Aman",marks:[80,90,75]},
+//   {name:"Priya",marks:[95,85,92]},
+//   {name:"Raj",marks:[60,55,70]},
+// ];
+
+// function getAverage(marks){
+//   return marks.reduce((sum, m) =>
+//    sum+m,0)/marks.length;
+//   }
+
+//   function getGrade(avg){
+//     if(avg >= 90) return 'A';
+//     if(avg >= 75) return 'B';
+//     if(avg >= 60) return 'C';
+//     return 'F';
+//   }
+
+//   students.forEach(s => {
+//     let avg = getAverage(s.marks);
+//     console.log(`${s.name}: Avg = ${avg.toFixed(2)}, Grade = ${getGrade(avg)}`);
+    
+//   })
+
+
+// let cart = [];
+// function addItem(name,price,qty = 1){
+//   let existing = cart.find(item => item.name === name);
+//   if(existing){
+//     existing.qty += qty;
+//   }else{
+//     cart.push({name,price,qty});
+//   }
+// }
+
+// function removeItem(name){
+//   cart = cart.filter(item => item.name !== name);
+// }
+
+// function getTotal(){
+//   return cart.reduce((sum,item) => sum+item.price * item.qty,0);
+// }
+// function showCart(){
+//   cart.forEach(item => {
+//     console.log(`${item.name} x ${item.qty} = ₹${item.price * item.qty}`);
+    
+//   });
+//   console.log(`Total: ₹${getTotal()}` );
+  
+// }
+
+// addItem('Sugar',45,50);
+// addItem('Thumpsup',95,10);
+// addItem('Crispelo',10,25);
+// addItem('DairyMilk',50,45);
+// console.log(cart);
+
+// removeItem('Thumpsup');
+// console.log(cart)
+// showCart();
+

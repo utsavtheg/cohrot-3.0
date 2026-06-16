@@ -1,0 +1,53 @@
+@font-face{
+  font-family: Reckless;
+  src: url(/font);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+} 
+main{
+  width: 100%;
+  min-height: 100vh;
+  background: #FBF9EB;
+}
+nav{
+  width: 100%;
+  background: #FFFEFB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   padding: 1vw;
+
+}
+nav .nav-part1{
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  width:33%;
+  font-family: Reckless;
+  
+}
+nav .nav-part2{
+  width: 5vw;
+  height: auto;
+  display: flex;
+}
+.nav-part2 img{
+  width: 100%;
+  object-fit: cover;
+}
+.nav-part3{
+  display: flex;
+  width:33%;
+  gap: 2vw;
+  align-items: center;
+  justify-content: end;
+}
