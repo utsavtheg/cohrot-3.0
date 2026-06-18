@@ -1,6 +1,10 @@
-@font-face{
-  font-family: Reckless;
-  src: url(/font);
+@font-face {
+  font-family: "Robot";
+  src: url("RobotoMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Reckless';
+  src: url('RecklessCondensedS-TRIAL-Book.woff')  format("truetype");
 }
 
 *{
@@ -12,42 +16,122 @@ html,body{
   height: 100%;
   width: 100%;
 } 
+.head{
+  width: 100%;
+  height: 3vh;
+  background: #2a2857;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: .04rem;
+  font-size: .75rem;
+  font-family:"Robot";
+}
 main{
   width: 100%;
-  min-height: 100vh;
-  background: #FBF9EB;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(/leaves.webp);
+  background-position: -18vh -3vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  gap: 0rem;
+  padding: 1rem;
+  zoom: 1.4;
 }
 nav{
   width: 100%;
+  height: 7vh;
+  border-radius: 0.7rem;
   background: #FFFEFB;
   display: flex;
   align-items: center;
   justify-content: space-between;
-   padding: 1vw;
-
+  padding: 0 1.75rem 0 1.375rem;
+  border: 0.0625rem solid currentColor;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
 }
 nav .nav-part1{
   display: flex;
   gap: 1rem;
-  font-size: 1rem;
+  font-size:1.9rem;
+  color: #9f9e9e;
   font-weight: 100;
   width:33%;
-  font-family: Reckless;
   
+  
+}
+.nav-part1 h3{
+  display: none;
 }
 nav .nav-part2{
   width: 5vw;
   height: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-part2 img{
-  width: 100%;
+  height: 4vh;
+  width:auto;
   object-fit: cover;
 }
 .nav-part3{
   display: flex;
   width:33%;
+  color: #9f9e9e;
   gap: 2vw;
+  font-size: 1.9rem;
   align-items: center;
   justify-content: end;
 }
+.nav-part3 h3{
+  display: none;
+}
+.btm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 3.5rem;
+
+}
+.btm span{
+  font-family:'Reckless';
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  line-height: 1;
+  letter-spacing:0.02rem ;
+}
+.btm p{
+  word-break: break-word;
+  font-weight: 50;
+  color: #161616ba;
+  font-family: sans-serif;
+  
+}
+.btm button{
+  width: 90%;
+  height: 3.5vh;
+  background: #2a2857;
+  color: #FFFEFB;
+  border-radius: 0.8rem;
+  border: none;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
