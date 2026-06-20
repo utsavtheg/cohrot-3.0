@@ -3,6 +3,8 @@ const main = document.querySelector("main");
 const nav = document.querySelector('nav');
 const text = document.querySelector('.txt');
 const container = document.querySelector('#containers');
+const contain = document.querySelector('#containers2');
+
 const cards = [
   {
     tittle:"Tea sachets",
@@ -97,7 +99,7 @@ const cards = [
 
 ]
 
-// --- Hero "change" interaction (unchanged) ---
+
 right.addEventListener("click",()=>{
   main.classList.add('change');
   text.innerHTML = `<span>A cup that fits the moment.</span>
@@ -153,14 +155,33 @@ function buildSlide(card){
   return div;
 }
 
-
 cards.forEach(card => {
   container.appendChild(buildSlide(card));
 });
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.5,
-  spaceBetween: 150,
+  spaceBetween: 30,
+   breakpoints: {
+    0: {
+      slidesPerView: 1.1,  
+    },
+
+    480: {
+      slidesPerView: 1.3,   
+    },
+
+    768: {
+      slidesPerView: 2.2,   
+    },
+
+    1024: {
+      slidesPerView: 3.3,     
+    },
+
+    1440: {
+      slidesPerView: 4,     
+    }
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -168,3 +189,112 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+const tea = ['chai tea','herbal tea','iced tea','black tea','green tea'];
+const input = document.querySelector('input');
+
+let index = 0;
+  setInterval(()=>{
+    input.placeholder = tea[index];
+
+    index++;
+
+    if (index >= tea.length) {
+        index = 0;
+    }
+  },2000);
+
+
+const reviews = [
+    {
+      opinion:"The right amount of spice.",
+      customerName:'Angelina R.',
+      image:"organic_high_mountain.avif",
+      product:'Organic mountain high chai',
+      bg:"#ffd1b8",
+      btmBg:"#fff4ec",
+    },
+    {
+      opinion:"This drink is incredibly refreshing, especially when served over ice.It's light,crisp,and instantly cooling, making it perfect for a quick refresh any time of day.",
+      customerName:'Jacob K.',
+      image:"Latte_Mix.avif",
+      product:"organic matcha mint",
+      bg:"#c0e571",
+      btmBg:"#eef7df",
+    },
+    {
+      opinion:"One sip and you can feel the difference—clean energy, rich flavor, and all the good stuff your body loves. Literally liquid GOLD.",
+      customerName:"Harrison G.",
+      image:"Naked_Tea.webp",
+      product:"Two Roots Golden Latte Mix",
+      bg:"#cce3ff",
+      btmBg:"#eaf3ff",
+    },
+    {
+      opinion:"Soo tasty and energizing.",
+      customerName:"Gracie M.",
+      image:"organic.webp",
+      product:"Organic Tropical Green Tea",
+      bg:"#c1ee91",
+      btmBg:"#edfadd",
+    },
+    {
+      opinion:"The perfect start to my day.",
+      customerName:"Jorge F.",
+      image:"alpine_berry_naked_featured.avif",
+      product:"Jasmine Petal",
+      bg:"#aee0f9",
+      btmBg:"#e8f7fe",
+    }
+  ]
+
+function buildSlide1(review){
+  const div = document.createElement('div');
+  div.classList.add('swiper-slide');
+  div.innerHTML = `<div class="cards">
+  <h3>${review.opinion}</h3>
+  <p>${review.customerName}</p>
+  <div class="btm-review">
+    <div class="img">
+      <img src="${review.image}">
+    </div>
+    <div class="name">
+      ${review.product}
+    </div>
+    <div class="shop">Shop</div>
+
+  </div>
+</div>`;
+  div.querySelector('.cards').style.background = review.bg;
+  div.querySelector('.btm-review').style.background = review.btmBg;
+  return div;
+}
+
+reviews.forEach(review => {
+  contain.appendChild(buildSlide1(review));
+});
+
+const swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 30,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.1,
+    },
+    480: {
+      slidesPerView: 1.3,
+    },
+    768: {
+      slidesPerView: 2.2,
+    },
+    1024: {
+      slidesPerView: 3.3,
+    },
+    1440: {
+      slidesPerView: 4,
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
