@@ -115,7 +115,8 @@ window.addEventListener("scroll",()=>{
   }
 })
 
-
+// --- Card rendering ---
+// Builds a single slide element for a given card object.
 function buildSlide(card){
   const div = document.createElement('div');
   div.classList.add('swiper-slide');
@@ -153,18 +154,18 @@ function buildSlide(card){
   return div;
 }
 
-
+// Render ALL cards immediately instead of one-per-click.
 cards.forEach(card => {
   container.appendChild(buildSlide(card));
 });
 
+// Initialize Swiper AFTER the slides exist in the DOM.
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.5,
-  spaceBetween: 150,
+  spaceBetween: 20,
 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
-
