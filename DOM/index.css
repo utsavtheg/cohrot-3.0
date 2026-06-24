@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background: #161616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 450px;
+  padding: 5rem 0rem 0rem;
+  width: 250px;
+  font-size:1.3rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  transition: ease-out;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -webkit-transition: ease-out;
+  -moz-transition: ease-out;
+  -ms-transition: ease-out;
+  -o-transition: ease-out;
+}
+.box:hover{
+   border: 0.2rem solid #4deeea;
+   transform: scale(1.2);
+   filter: drop-shadow(3px 5px 8px hsl(220deg 60% 50% / 0.5));
+   -webkit-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   -o-transform: scale(1.2);
+   -webkit-filter: drop-shadow(3px 5px 8px hsl(220deg 60% 50% / 0.5));
+}
+.box input{
+  height: 40px;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.check button{
+  height: 40px;
+  padding: 1rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: rgb(117, 117, 188);
+  color: #ffffff;
+  font-family: monospace;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.para{
+  display: none;
+  font-size: 1rem;
+  text-align: center;
+}

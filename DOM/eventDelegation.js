@@ -45,4 +45,4 @@ let scoreInc = 0;
 box.addEventListener("click", (e) => {
   scoreInc += 1;
   score.textContent = scoreInc;
-})
+}); 
