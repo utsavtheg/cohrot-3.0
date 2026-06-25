@@ -265,3 +265,218 @@
 // fn();
 // fn();
 // fn();
+
+// 1
+// console.log(x);
+// var x = 5;
+
+// // 2
+// foo();
+// function foo() { console.log("called"); }
+
+// // 3
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1000);
+// }
+
+// // 4
+// function make() {
+//   let secret = "hidden";
+//   return () => secret;
+// }
+// const reveal = make();
+// console.log(reveal());
+
+// this keyword kaise call kiya babu!
+// console.log(this);
+
+// 'use strict'
+// function show(){
+//   console.log(this);
+  
+// }
+// show();
+
+// const user = {
+//   name:"Rahul",
+//   greet(){
+//     console.log("Hi, "+this.name);
+    
+//   }
+// };
+// // user.greet();
+// const fn = user.greet;
+// fn();
+
+// const user = {
+//   name:"Rahul",
+//   greet:()=>{
+//     console.log(this.name);
+    
+//   }
+// }
+// user.greet();
+// const user = {
+//   name:"Rahul",
+//   hobbies:["coding","gaming"],
+//   show(){
+//     this.hobbies.forEach((hobby) =>{
+//       console.log(this.name + " likes " + hobby);
+      
+//     });
+//   }
+// }
+// user.show();
+// function introduce(city,country){
+//   console.log(`Main ${this.name} hoon ${city}, ${country} se`);
+
+  
+// }
+// const person  = {name:"Rahul"};
+// introduce.call(person,'Moscow','Rajasthan');
+
+// let user = prompt('enter your name:');
+// let userAge = prompt('enter your age:');
+// let person = {name:user,age:userAge};
+
+
+//  function useOfThisByCall(country = "India"){
+//   return `Hii ${this.name} you are ${this.age} years old and ${country}`;
+// }
+// console.log(useOfThisByCall.call(person));
+
+// function tripPlan(destination, days){
+//   console.log(`Let's go to ${destination} guy's our budget is ${this.budget} and no of days ${days}`);
+// }
+// let check = {budget:12000};
+// tripPlan.apply(check,['Udaipur',5]);
+
+// function bdayTreat(spot,date){
+//   console.log(`Every one come at ${this.time} location is ${spot} and date is ${date}`);
+// }
+// let check = {time:"5 am"};
+
+// const treat = bdayTreat.bind(check);
+// treat('NMB',25);
+
+// function Person(name){
+//   this.name = name;
+// }
+// const p = new Person('Rahul');
+// console.log(p.__proto__ === Person.prototype);
+
+
+// const animal = {
+//   eats:true,
+//   walk(){console.log('Animal chal rha hai');
+//   }
+// };
+
+// const dog = Object.create(animal);
+// dog.barks = true;
+// console.log(dog.barks);
+// console.log(dog.eats);
+// dog.walk();
+
+// const Shopping = {
+//   budget:11000,
+//   wants:"Outfit",
+//   location:"Delhi",
+//   kisKisKoLayJaaRhaHai:"4",
+//   letGo(){console.log(`Guy's Chalte hai Shopping par`)},
+// };
+// const friends = Object.create(Shopping);
+// friends.go = console.log(`Kab chl rhe hai lela!`);
+// console.log(friends.wants);
+// console.log(friends.location);
+// friends.letGo();
+// const protoTypeCreate = {
+//   identity:"Prototype",
+//   id(){console.log(`I am a prototype of ${this.user}`);
+//   },
+// };
+// const checkProto = Object.create(protoTypeCreate);
+// checkProto.user = "check";
+// checkProto.id();
+// console.log(checkProto.identity);
+
+// Class
+// class Person {
+//   constructor(name,age){
+//     this.name = name;
+//     this.age = age;
+//   }
+//   greet(){
+//     console.log(`Hii,main ${this.name}`);
+    
+//   }
+// }
+// const p = new Person('Rahul',25);
+// p.greet();
+
+// class CheckClass{
+//   constructor(brand,price){
+//      this.brand = brand;
+//      this.price = price;
+//   }
+
+//   mobile(){console.log(`Hii i have ${this.brand} smartphone and price is ${this.price}.`);
+//   };
+// };
+// const c = new CheckClass('Realme',15000);
+// c.mobile();
+
+// class Animal{
+//   constructor(name){
+//     this.name = name;
+//   }
+//   eat(){console.log(`${this.name} kha rha hai.`);
+//   }
+// };
+
+// class Dog extends Animal{
+//   constructor(name,breed){
+//     super(name);
+//     this.breed = breed;
+//   }
+//   bark(){console.log(`Hii i am ${this.name} i can bark.`);
+//   };
+// }
+// const d = new Dog('Tommy','labrador');
+// d.eat();
+// d.bark();
+
+// class City{
+//   constructor(name,state){
+//     this.name = name;
+//     this.state = state;
+//   }
+//   spot(){
+//     console.log(`Hii my city is ${this.name} and it is located in ${this.state}`);
+    
+//   };
+// }
+
+// class ChiefMinister extends City{
+//  constructor(name,state,cm){
+//   super(name,state);
+//   this.cm = cm;
+  
+//  }
+//  chiefMinister(){
+//   console.log(`Hii i am ${this.cm} cm of ${this.state}`);
+  
+//  }
+// }
+
+// const c = new ChiefMinister('Rishikesh','UttraKhand','Pushkar Singh');
+// c.spot();
+// c.chiefMinister();
+
+// class MathHelper {
+//   static PI = 3.14159;
+//   static add(a,b){return a + b;}//static method
+// }
+// console.log(MathHelper.add(45,90));
+// console.log(MathHelper.PI.toFixed(2));
+
